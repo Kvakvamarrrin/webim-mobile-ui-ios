@@ -10,8 +10,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '13.0'
   s.swift_version = '5.5'
   s.source_files = 'Sources/WebimMobileWidget/Classes/**/*.{swift,strings}'
-  s.resources = 'Sources/WebimMobileWidget/Assets/**/*.{xib,strings}',
-  'Sources/WebimMobileWidget/Assets/WidgetImages.xcassets'
+  s.resource_bundles = { 'WebimMobileWidget' => ['Sources/WebimMobileWidget/Assets/**/*.{xib,strings}', 'Sources/WebimMobileWidget/Assets/WidgetImages.xcassets'] }
   s.dependency 'WebimMobileSDK', '~> 3.42.0'
   s.dependency 'WebimKeyboard', '~> 1.0.3'
   s.dependency 'Cosmos', '~> 25.0.1'
